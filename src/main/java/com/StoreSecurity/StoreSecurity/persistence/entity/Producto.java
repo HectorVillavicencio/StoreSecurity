@@ -21,7 +21,7 @@ public class Producto {
     private SubCategoria subcategoria;
 
     // Calcula si el producto esta disponible
-    public boolean isDisponible() {
+    public boolean estaDisponible() {
         return this.activo != null && this.activo && this.stock > 0;
     }
 
