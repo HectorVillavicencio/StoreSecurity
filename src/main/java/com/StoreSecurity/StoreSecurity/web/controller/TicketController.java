@@ -5,9 +5,7 @@ import com.StoreSecurity.StoreSecurity.dto.TicketResponseDTO;
 import com.StoreSecurity.StoreSecurity.persistence.entity.Ticket;
 import com.StoreSecurity.StoreSecurity.persistence.repository.TicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/tickets")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class TicketController {
 
     @Autowired
